@@ -18,9 +18,16 @@ const teamArray = [];
 
 
 function createApp() {
+    console.log(
+        "\n", "-".repeat(70), "\n",
+        "\n", "Welcome to Dream Team!", "\n", 
+        "\n", "-".repeat(70), "\n",
+        "\n", "The easy way to organize your team", "\n",
+        "\n", "-".repeat(70), "\n",
+    )
 
     function addManager () {
-        console.log("Let's get started on building your team!");
+        console.log("\n", "Let's get started on building your team!", "\n");
         inquirer.prompt( [
             {
                 type: "input",
@@ -139,6 +146,7 @@ function createApp() {
             fs.mkdirSync(OUTPUT_DIR)
         }
         fs.writeFileSync(outputPath, render(teamMembers), "utf-8");
+        console.log("\n", "Your team is complete! HTML webpage has been sent to output folder!", "\n", "\n", "Thank you for using Dream Team!", "\n")
     }
 
     addManager();
