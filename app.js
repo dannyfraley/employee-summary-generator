@@ -39,11 +39,11 @@ function createApp() {
            },
            {
                type: "input",
-               name: "managerOffice",
+               name: "managerOfficeNumber",
                message: "Please enter your manager's office number:"
            }
         ]).then(answers => {
-            const manager = new Manager(answers.managerName, answers.managerID, answers.managerEmail, answers.managerOffice);
+            const manager = new Manager(answers.managerName, answers.managerID, answers.managerEmail, answers.managerOfficeNumber);
             teamMembers.push(manager);
             teamArray.push(answers.managerId);
             console.log("\n", "The manager has been added to your team.", "\n");
